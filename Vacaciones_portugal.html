@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vacaciones Portugal 2026</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+
+body {
+  color: #222;
+  font-weight: bold;
+  padding: 30px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  transition: background-image 1.5s ease-in-out;
+}
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #1f3c88;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 25px;
+      align-items: start;
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: sticky;
+      top: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.432);
+      backdrop-filter: blur(12px);
+     -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    .card h2 {
+      margin-bottom: 15px;
+      color: #008f94;
+      font-size: 1.2rem;
+    }
+
+    .card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card li {
+      background: #eef3ff;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .day {
+      background: rgba(255, 255, 255, 0.432);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: transform 0.2s ease;
+    }
+
+    .day:hover {
+      transform: translateY(-4px);
+    }
+
+    .fecha {
+      font-size: 0.9rem;
+      color: #ffffff;
+    }
+
+    .destino {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #008f94;
+    }
+
+    .actividad {
+      line-height: 1.5;
+    }
+
+    .hotel {
+      background: #f5f5f5;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      text-decoration: none;
+      background: #008f94;
+      color: white;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #162c66;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: relative;
+        top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+    <script>
+  const fondos = [
+    "https://images.unsplash.com/photo-1555881400-74d7acaacd8b",
+    "https://images.unsplash.com/photo-1569959220744-ff553533f492",
+    "https://images.unsplash.com/photo-1585208798174-6cedd86e019a",
+    "https://images.unsplash.com/photo-1544121415-acc4ed3e785c"
+  ];
+
+  let fondoActual = 0;
+
+  function cambiarFondo() {
+    document.body.style.backgroundImage =
+      `linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+       url('${fondos[fondoActual]}')`;
+
+    fondoActual++;
+
+    if (fondoActual >= fondos.length) {
+      fondoActual = 0;
+    }
+  }
+
+  cambiarFondo();
+
+  setInterval(cambiarFondo, 8000);
+</script>
+
+  <h1><img src="vacaciones portugal text.gif" alt="viaje a portugal" width="1000"></h1>
+
+  <div class="layout">
+
+    <!-- PANEL LATERAL -->
+    <aside class="sidebar">
+
+      <div class="card">
+        <h2>📌 Lista de actividades</h2>
+        <ul>
+            <a class="btn" href="https://maps.app.goo.gl/T6TE1LiJGAmRxUkc7" target="_blank">Lista en maps</a>
+          <li>Paseo por Oporto</li>
+          <li>Excursión a Coimbra</li>
+          <li>Grutas de Mira de Aire</li>
+          <li>Playa Nazaré</li>
+          <li>Lisboa</li>
+          <li>Sintra y Palacio da Pena</li>
+          
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>🍴 Comida</h2>
+        <ul>
+            <a class="btn" href="https://maps.app.goo.gl/tRh6v2fTnfvjmvMv5" target="_blank">Lista en maps</a>
+          <li>Francesinha en Oporto</li>
+          <li>Bacalhau</li>
+          <li>Pastéis de nata</li>
+          <li>Frango piripiri</li>
+          <li>Bifanas</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>🛏 Dormir</h2>
+        <ul>
+            <a class="btn" href="https://maps.app.goo.gl/R9jThuKi6uPWexBP9" target="_blank">Lista en maps</a>
+          <li>Asgard Oporto Downtown Apartments</li>
+          <li>Casa abuela</li>
+          <li>Masa Hotel Almirante</li>
+        </ul>
+      </div>
+
+    </aside>
+
+    <!-- CALENDARIO -->
+    <section class="calendar">
+
+      <div class="day">
+        <div class="fecha">Martes 15 jul</div>
+        <div class="destino">✈ Llegada</div>
+        <div class="actividad">Llegada Julia</div>
+        <div class="buttons">
+          <a class="btn" href="#">Detalles</a>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="fecha">Miércoles 16 jul</div>
+        <div class="destino">🔴 Sevilla</div>
+        <div class="actividad">Preparación del viaje</div>
+        <div class="hotel">🛏 Hoteles del Sur</div>
+        <div class="buttons">
+          <a class="btn" href="https://maps.app.goo.gl/GsHHhdFaLJqEVNko6" target="_blank">Hotel</a>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="fecha">Jueves 17 jul</div>
+        <div class="destino">🔵 Oporto</div>
+        <div class="actividad">Salida 16:20 SVQ → 16:35 OPO · Check‑in hotel</div>
+        <div class="hotel">🛏 Asgard Oporto Downtown Apartments</div>
+        <div class="buttons">
+          <a class="btn" href="#">Vuelo</a>
+          <a class="btn" href="https://maps.app.goo.gl/DtRmcS7ikocUHREm7" target="_blank">Hotel</a>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="fecha">Viernes 18 jul</div>
+        <div class="destino">🔵 Oporto</div>
+        <div class="actividad">Día libre en Oporto</div>
+        <div class="hotel">🛏 Asgard Oporto Downtown Apartments</div>
+        <div class="buttons">
+          <a class="btn" href="https://maps.app.goo.gl/LHTyebnWtpHdngRH9" target="_blank">Mapa</a>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="fecha">Sábado 19 jul</div>
+        <div class="destino">🟢 Anadia</div>
+        <div class="actividad">Tren Oporto → Anadia · Almuerzo · Paseo por el pueblo</div>
+        <div class="hotel">🛏 Casa abuela</div>
+        <div class="buttons">
+          <a class="btn" href="https://maps.app.goo.gl/dQY8JC543h9SHAtp9" target="_blank">Mapa</a>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="fecha">Domingo 20 jul</div>
+        <div class="destino">🟢 Anadia</div>
+        <div class="actividad">Grutas de Mira de Aire + playa Nazaré</div>
+        <div class="hotel">🛏 Casa abuela</div>
+        <div class="buttons">
+          <a class="btn" href="https://maps.app.goo.gl/NSG6hedtHtZxqsvW8" target="_blank">Grutas de aire</a>
+          <a class="btn" href="https://maps.app.goo.gl/2u9kNe1Z1vxwMD799" target="_blank">Nazaré</a>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="fecha">Lunes 21 jul</div>
+        <div class="destino">🟢 Anadia</div>
+        <div class="actividad">Excursión zona: Bosque, Buçaco, etc</div>
+        <div class="hotel">🛏 Casa abuela</div>
+        <div class="buttons">
+          <a class="btn" href="https://maps.app.goo.gl/XEzUb4eJNxGUgTrf9" target="_blank">Sierra de Buçaco</a>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="fecha">Martes 22 jul</div>
+        <div class="destino">🟢 Anadia</div>
+        <div class="actividad">Camino de madera</div>
+        <div class="hotel">🛏 Casa abuela</div>
+        <div class="buttons">
+          <a class="btn" href="#">Ver ruta</a>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="fecha">Miércoles 23 jul</div>
+        <div class="destino">🟠 Coimbra</div>
+        <div class="actividad">Excursión a Coimbra · Universidad · Casco histórico</div>
+        <div class="hotel">🛏 Casa abuela</div>
+        <div class="buttons">
+          <a class="btn" href="#">Universidad</a>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="fecha">Jueves 24 jul</div>
+        <div class="destino">🟣 Lisboa</div>
+        <div class="actividad">Tren Anadia → Lisboa · Check‑in hotel</div>
+        <div class="hotel">🛏 Masa Hotel Almirante</div>
+        <div class="buttons">
+          <a class="btn" href="#">Tren</a>
+          <a class="btn" href="#">Hotel</a>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="fecha">Viernes 25 jul</div>
+        <div class="destino">🟣 Lisboa</div>
+        <div class="actividad">Día en Lisboa · Excursión a Sintra (Palacio da Pena)</div>
+        <div class="hotel">🛏 Masa Hotel Almirante</div>
+        <div class="buttons">
+          <a class="btn" href="#">Sintra</a>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="fecha">Sábado 26 jul</div>
+        <div class="destino">🟣 Lisboa</div>
+        <div class="actividad">Último día en Lisboa</div>
+        <div class="hotel">🛏 Masa Hotel Almirante</div>
+        <div class="buttons">
+          <a class="btn" href="#">Plan del día</a>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="fecha">Domingo 27 jul</div>
+        <div class="destino">✈ Vuelta</div>
+        <div class="actividad">Cada uno vuelve a su casa</div>
+        <div class="buttons">
+          <a class="btn" href="#">Vuelo</a>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+</body>
+</html>
